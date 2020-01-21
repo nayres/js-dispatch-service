@@ -1,0 +1,19 @@
+{
+  "name": "js-dispatch-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayres/js-dispatch-service.git"
+  },
+  "author": "Nick Ayres <ayres.nickolas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayres/js-dispatch-service/issues"
+  },
+  "homepage": "https://github.com/nayres/js-dispatch-service#readme"
+}
