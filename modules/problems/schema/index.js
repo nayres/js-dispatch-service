@@ -8,11 +8,6 @@ import {
   GraphQLList,
 } from 'graphql'
 
-// function to add code in correct format
-function parser(code) {
-  return code.replace(/(\r\n|\r|\n)/g, '+ +');
-}
-
 const ProblemType = new GraphQLObjectType({
   name: 'Problem',
   fields: () => ({
@@ -106,7 +101,7 @@ const Mutation = new GraphQLObjectType({
           title: args.title,
           description: args.description,
           example: args.example,
-          snippet: parser(args.snippet),
+          snippet: args.snippet,
           testCase: args.testCase
         });
         return ProblemModel.save()
