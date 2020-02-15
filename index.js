@@ -24,8 +24,7 @@ app.use(errorhandler());
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+  useNewUrlParser: true
 });
 mongoose.connection.on('connected', () => {    
   console.log(`mongoose connection open`); 
