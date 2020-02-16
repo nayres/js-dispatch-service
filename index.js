@@ -8,12 +8,13 @@ import cors from'cors';
 import helmet from'helmet';
 import morgan from'morgan';
 import errorhandler from'errorhandler';
+import { RootQuery } from './modules/problems';
 
-import { RootQuery } from './modules/problems/schema';
 dotenv.config();
-const PORT = process.env.PORT || 8000;
 
+const PORT = process.env.PORT || 8000;
 const app = express();
+
 app.use(cors());
 app.use(helmet());
 app.use(cookieParser());
