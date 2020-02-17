@@ -1,22 +1,10 @@
 import { ProblemsModel } from '../../../models';
 import { ProblemType } from '../types';
-// import { node } from 'compile-run';
 import {
   GraphQLObjectType,
   GraphQLString,
   GraphQLNonNull,
 } from 'graphql'
-
-// const funcExec = 'isTrue([1,2,3,4,5])'
-// const sourcecode = `function isTrue(a) { return a.includes(6) }; console.log(${funcExec})`;
-// let resultPromise = node.runSource(sourcecode);
-// resultPromise
-//   .then(result => {
-//     console.log(result);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',

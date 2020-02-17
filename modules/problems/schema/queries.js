@@ -1,4 +1,5 @@
 import { ProblemsModel } from '../../../models';
+import { node } from 'compile-run';
 import { ProblemType } from '../types';
 import {
   GraphQLObjectType,

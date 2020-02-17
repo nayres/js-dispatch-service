@@ -8,7 +8,7 @@ import cors from'cors';
 import helmet from'helmet';
 import morgan from'morgan';
 import errorhandler from'errorhandler';
-import { RootQuery } from './modules/problems';
+import { ProblemQuery } from './modules/problems';
 
 dotenv.config();
 
@@ -35,8 +35,8 @@ mongoose.connection.on('error', error => {
   console.log('mongoose connection error: ', error);
 });
 
-app.use("/graphql", ExpressGraphQL({
-  schema: RootQuery,
+app.use('/graphql', ExpressGraphQL({
+  schema: ProblemQuery,
   graphiql: true
 }));
 
