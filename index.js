@@ -9,6 +9,7 @@ import helmet from'helmet';
 import morgan from'morgan';
 import errorhandler from'errorhandler';
 import { ProblemQuery } from './modules/problems';
+import routes from './routes';
 
 dotenv.config();
 
@@ -35,6 +36,8 @@ mongoose.connection.on('error', error => {
   console.log('mongoose connection error: ', error);
 });
 
+//TODO: prettier route
+app.use(routes);
 app.use('/graphql', ExpressGraphQL({
   schema: ProblemQuery,
   graphiql: true
