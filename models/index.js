@@ -1,2 +1,2 @@
-export { ProblemModel } from './problems/problemsModel';
+export { ProblemsModel } from './problems';
 

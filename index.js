@@ -8,12 +8,14 @@ import cors from'cors';
 import helmet from'helmet';
 import morgan from'morgan';
 import errorhandler from'errorhandler';
+import { ProblemQuery } from './modules/problems';
+import routes from './routes';
 
-import { RootQuery } from './modules/problems/schema';
 dotenv.config();
-const PORT = process.env.PORT || 8000;
 
+const PORT = process.env.PORT || 8000;
 const app = express();
+
 app.use(cors());
 app.use(helmet());
 app.use(cookieParser());
@@ -34,8 +36,10 @@ mongoose.connection.on('error', error => {
   console.log('mongoose connection error: ', error);
 });
 
-app.use("/graphql", ExpressGraphQL({
-  schema: RootQuery,
+//TODO: prettier route
+app.use(routes);
+app.use('/graphql', ExpressGraphQL({
+  schema: ProblemQuery,
   graphiql: true
 }));
 

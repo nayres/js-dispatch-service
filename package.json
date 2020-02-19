@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon ./start.js"
+    "start": "nodemon ./start.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,13 @@
   },
   "homepage": "https://github.com/nayres/js-dispatch-service#readme",
   "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
     "@types/node": "^13.7.0",
     "apollo-server-express": "^2.9.16",
     "body-parser": "^1.19.0",
+    "compile-run": "^2.3.2",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -31,11 +35,7 @@
     "mongoose": "^5.8.9",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
+    "subscriptions-transport-ws": "^0.9.16",
     "typescript": "^3.7.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/register": "^7.8.3"
   }
 }
